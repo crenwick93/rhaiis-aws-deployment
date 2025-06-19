@@ -1,0 +1,14 @@
+---
+collections:
+  # AWS collections for EC2 instance management and networking
+  - name: amazon.aws
+    version: ">=6.0.0"  # Supports latest EC2 instance features
+
+  # Used for alternatives module in setup_nvidia_cuda role
+  # and other system management tasks
+  - name: community.general
+    version: ">=7.0.0"
+
+  # Used for sysctl module in setup_rhaiis_on_rhel role
+  - name: ansible.posix
+    version: ">=1.5.0"

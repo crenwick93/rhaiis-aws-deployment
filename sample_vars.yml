@@ -1,0 +1,22 @@
+---
+instance_name: "your-rhaiis-instance"
+region: "us-east-1"
+ami_id: "ami-0673a5faaca9a47cb"  # RHEL 9.5 AMI
+instance_type: "g5.2xlarge"
+key_name: ""  # Leave empty to auto-generate
+vpc_cidr: "10.0.0.0/16"
+subnet_cidr: "10.0.1.0/24"
+volume_size: 500
+instance_tags:
+  owner: "your-username"  # Required: Your username or identifier
+  Environment: "Development"  # Optional: Environment tag
+  Project: "RHAIIS"  # Optional: Project tag
+
+######################################## RHAIIS variables
+setup_rhaiis_on_rhel_hf_token: ""  # Your HuggingFace token
+# Increase health check timeout for slower networks
+vllm_health_check_retries: 120  # 1 hour total wait time
+setup_rhaiis_on_rhel_registry_username: ""  # Your registry username
+setup_rhaiis_on_rhel_registry_password: ""  # Your registry password
+setup_rhaiis_on_rhel_vllm_model: RedHatAI/Llama-3.1-8B-Instruct
+setup_rhaiis_on_rhel_api_token: testtoken
