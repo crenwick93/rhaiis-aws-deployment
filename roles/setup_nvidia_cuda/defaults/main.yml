@@ -4,9 +4,9 @@
 # Common vars
 
 setup_nvidia_cuda_python_version: '3.11'
-setup_nvidia_cuda_cuda_version: '12.9'
-setup_nvidia_cuda_cuda_major_version: '12'
-setup_nvidia_cuda_cuda_minor_version: '9'
+setup_nvidia_cuda_cuda_version: '13.0'
+setup_nvidia_cuda_cuda_major_version: '13'
+setup_nvidia_cuda_cuda_minor_version: '0'
 setup_nvidia_cuda_debug: false
 
 setup_nvidia_cuda_common_dnf_packages:
@@ -22,7 +22,7 @@ setup_nvidia_cuda_common_dnf_packages:
 
 setup_nvidia_cuda_nvidia_rhel_dnf_packages: 
 
-  - "@nvidia-driver:latest-dkms"
+  - "@nvidia-driver:open-dkms"
   - cuda-toolkit
   - nvidia-gds
 

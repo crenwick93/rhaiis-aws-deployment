@@ -1,14 +1,19 @@
 ---
 - name: Setup Nvidia CUDA
-  hosts: gpu_servers
+  hosts: rhel_inference_server
   gather_facts: true
   become: true
+  vars_files:
+    - vault.yml
 
   roles:
     - setup_nvidia_cuda
 
 - name: Deploy model on rhaiis
-  hosts: gpu_servers
+  hosts: rhel_inference_server
   become: true
+  vars_files:
+    - vault.yml
+
   roles:
     - role: setup_rhaiis_on_rhel

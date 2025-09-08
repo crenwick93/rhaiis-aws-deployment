@@ -4,6 +4,9 @@
 vars.yml
 *_vars.yml
 !sample_vars.yml
+vault.yml
+inventory
+.ansible
 
 # Python
 __pycache__/
@@ -59,9 +62,9 @@ Thumbs.db
 logs/
 
 # Generated files
-inventory.ini 
+inventory.ini
 
 # Instance directories
 instances/*
 !instances/.gitignore
-!instances/.gitkeep 
+!instances/.gitkeep
