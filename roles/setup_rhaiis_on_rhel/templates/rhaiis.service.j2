@@ -33,7 +33,7 @@ ExecStart=/bin/bash -c '/usr/bin/podman run --rm --device nvidia.com/gpu=all -p 
   --enforce-eager \
   --disable-log-stats \
   --enable-auto-tool-choice \
-  --tool-call-parser pythonic \
+  --tool-call-parser pythonic \ # This needs changing to llama3_json when using the llama3 template
   >> /tmp/rhaiis.log 2>&1'
 ExecStop=/usr/bin/podman stop {{ setup_rhaiis_on_rhel_vllm_container_name }}
 Restart=on-failure
